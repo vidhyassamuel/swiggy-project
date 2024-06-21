@@ -3,6 +3,7 @@ import reducer from "./Reducers";
 
 const initialState = {
   cardData: [],
+  restaurantId:"",
 };
 
 const Context = createContext(initialState);

@@ -1,0 +1,128 @@
+.details-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  .menu-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+  }
+  
+  .menu-item-info {
+    flex: 1; /* Take available space */
+  }
+  
+  .menu-item-info h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .menu-item-info p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .menu-item-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #28a745;
+  }
+  
+  .menu-item-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .menu-item-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .add-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-button:hover {
+    background-color: #218838;
+  }
+  
+  .container {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .center {
+    width: 180px;
+    height: 60px;
+    position: relative; /* Changed to relative to contain the absolute elements inside */
+  }
+  
+  .btn {
+    width: 180px; /* Changed to match SVG width */
+    height: 60px; /* Changed to match SVG height */
+    cursor: pointer;
+    background: transparent;
+    border: none; /* Removed border */
+    outline: none;
+    position: relative; /* Added to position span inside button */
+  }
+  
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #91C9FF;
+    stroke-width: 2;
+    stroke-dasharray: 280; /* Adjusted value */
+    stroke-dashoffset: 280; /* Adjusted value */
+    transition: stroke-dashoffset 1s ease-in-out;
+  }
+  
+  .btn:hover svg {
+    stroke-dashoffset: 0; /* Adjusted value for animation */
+  }
+  
+  .btn span {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1; /* Ensures text is above the SVG */
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .btn:hover {
+    background: #4F95DA;
+  }
+  
+  .btn:hover span {
+    color: #fff;
+  }
+  

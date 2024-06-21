@@ -1,13 +1,20 @@
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import DetailPage from "./pages/DetailPage";
 import Navbar from "./components/Navbar";
-import OwlCarosel from "./components/OwlCarosel";
-import Restaurant from "./components/Restaurant"
+
 
 function App() {
   return (
     <>
-      <Navbar />
-      <OwlCarosel/>
-      <Restaurant/>
+      <Router>
+      <Navbar/>
+        <Routes>
+          <Route path="/" element={<LandingPage/>} ></Route>
+          <Route path="/detailsPage" element={<DetailPage/>} ></Route>
+        </Routes>
+        {/* <Footer/> */}
+      </Router>
     </>
   );
 }

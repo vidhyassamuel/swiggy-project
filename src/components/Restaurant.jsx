@@ -1,19 +1,25 @@
 import { useValue } from "../context/ContextProvider";
 import "../assets/css/components/Restaurant.css";
+import { useNavigate } from "react-router-dom";
 
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 
 const Restaurant = () => {
+  const navigate = useNavigate();
   const {
-    state: { cardData },
+    state: { cardData },dispatch
   } = useValue();
 
-  console.log(cardData, "thirdCardthirdCard");
+  const detailsPage = (restaurantId)=>{
+    console.log(restaurantId, "restaurantId");
+    dispatch({type:"RESTAURANT_ID", payload:restaurantId})
+    navigate("/detailsPage");
+  }
 
   return (
     <div className="restaurant-container">
       {cardData?.map((item, index) => (
-        <div className="restaurant-card" key={index}>
+        <div className="restaurant-card" key={index} onClick={()=>detailsPage(item?.info.id)} >
           <img
             src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${item?.info?.cloudinaryImageId}`}
             alt=""
