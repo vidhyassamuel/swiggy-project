@@ -4,22 +4,22 @@
   justify-content: center;
   gap: 50px;
   width: 90%;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 .restaurant-card {
   border: 1px solid gray;
   border-radius: 5px;
   width: 250px;
-  text-align: center;
-  padding: 5px;
+  text-align: center; 
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .restaurant-image {
-  width: 80%;
-  height: 150px;
+  width: 100%; /* Ensure the image occupies the complete width */
+  height: 150px; /* Adjust as needed */
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .restaurant-rating {
