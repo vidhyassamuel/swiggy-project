@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
   const itemCount = useSelector(state => state.cart.itemCount);
 
