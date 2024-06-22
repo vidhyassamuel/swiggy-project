@@ -7,8 +7,11 @@ import "../assets/css/components/DetailPage.css";
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import { useDispatch } from "react-redux";
+import { addToCart } from "../Redux/action";
 
 const DetailPage = () => {
+  const dispatch = useDispatch();
   const [menuItems, setMenuItems] = useState([]);
   const [carouselData, setCarouselData] = useState([]);
   const {
@@ -61,6 +64,10 @@ const DetailPage = () => {
       }
     }
   };
+const handleAddToCart = (item) => {
+  dispatch(addToCart(item))
+}
+
 
   return (
     <div className="details-page">
@@ -102,7 +109,7 @@ const DetailPage = () => {
               src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit//${item?.card.info.imageId}`}
               alt=""
             />
-            <button className="add-button"> ADD </button>
+            <button className="add-button" onClick={()=>handleAddToCart (item)}  > ADD </button>
           </div>
         </div>
       ))}
