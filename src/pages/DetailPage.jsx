@@ -8,7 +8,9 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { useDispatch } from "react-redux";
-import { addToCart } from "../Redux/action";
+// import { addToCart } from "../Redux/action";
+import { addItem } from "../Redux/CartSlice";
+
 
 const DetailPage = () => {
   const dispatch = useDispatch();
@@ -64,10 +66,13 @@ const DetailPage = () => {
       }
     }
   };
-const handleAddToCart = (item) => {
-  dispatch(addToCart(item))
-}
+// const handleAddToCart = (item) => {
+//   dispatch(addToCart(item))
+// }
 
+const addFoodItem = (item) => {
+  dispatch(addItem(item));
+};
 
   return (
     <div className="details-page">
@@ -109,7 +114,8 @@ const handleAddToCart = (item) => {
               src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit//${item?.card.info.imageId}`}
               alt=""
             />
-            <button className="add-button" onClick={()=>handleAddToCart (item)}  > ADD </button>
+            {/* <button className="add-button" onClick={()=>handleAddToCart (item)}  > ADD </button> */}
+            <button onClick={() => addFoodItem(item)} className="css-button-sliding-to-left--sand">Add Item</button>
           </div>
         </div>
       ))}

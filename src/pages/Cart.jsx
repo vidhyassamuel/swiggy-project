@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
+import { increaseQuantity, decreaseQuantity } from "../Redux/CartSlice";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
-import { increaseQuantity, decreaseQuantity } from "../Redux/action";
 import "../assets/css/components/Cart.css";
 
 const Cart = () => {
