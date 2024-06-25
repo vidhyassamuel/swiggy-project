@@ -29,7 +29,7 @@ const Navbar = () => {
           <img className="navbar-logo" src={SWIGGY_ICON} alt="Logo" />
           </Link>
           <div className="navbar-location">
-            <LocationOnIcon />
+            <LocationOnIcon fontSize="small"  />
             <span className="navbar-location-other">Other</span>
             <span className="navbar-location-detail">
               Bengaluru, Karnataka, India
@@ -38,23 +38,23 @@ const Navbar = () => {
         </div>
         <div className="navbar-right">
           <a href="#" className="navbar-link">
-            <BusinessCenterIcon />
+            <BusinessCenterIcon fontSize="small" />
             Swiggy Corporate
           </a>
           <a href="#" className="navbar-link">
-            <SearchIcon />
+            <SearchIcon fontSize="small" />
             Search
           </a>
           <a href="#" className="navbar-link">
-            <LocalOfferIcon />
+            <LocalOfferIcon fontSize="small" />
             Offers <span className="navbar-new">NEW</span>
           </a>
           <a href="#" className="navbar-link">
-            <HelpOutlineIcon />
+            <HelpOutlineIcon fontSize="small" />
             Help
           </a>
           <a href="#" className="navbar-link">
-            <AccountCircleIcon />
+            <AccountCircleIcon fontSize="small" />
             Sign In
           </a>
           <a href="#" className="navbar-link" onClick={handleCartClick}>
