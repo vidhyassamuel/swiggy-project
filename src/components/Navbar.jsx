@@ -30,7 +30,6 @@ const Navbar = () => {
           </Link>
           <div className="navbar-location">
             <LocationOnIcon fontSize="small"  />
-            <span className="navbar-location-other">Other</span>
             <span className="navbar-location-detail">
               Bengaluru, Karnataka, India
             </span>
