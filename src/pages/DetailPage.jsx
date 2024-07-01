@@ -9,7 +9,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { useDispatch } from "react-redux";
 import { addItem } from "../Redux/CartSlice";
-import SimpleLoader from 'react-simple-dots-loader';
+// import SimpleLoader from 'react-simple-dots-loader';
 
 const DetailPage = () => {
   const dispatch = useDispatch();
