@@ -76,7 +76,7 @@ const DetailPage = () => {
     <div className="details-page">
       {loadingCarousel ? (
         <div className="loader-container"  style={{height:"80vh"}} >
-          <SimpleLoader color='green' />
+        <h1>Loading...</h1>
         </div>
       ) : (
         <OwlCarousel
@@ -99,7 +99,7 @@ const DetailPage = () => {
 
       {loadingMenuItems ? (
         <div className="loader-container" style={{height:"80vh"}}>
-          <SimpleLoader color='green' />
+        <h1>Loading...</h1>
         </div>
       ) : (
         menuItems?.map((item, index) => (

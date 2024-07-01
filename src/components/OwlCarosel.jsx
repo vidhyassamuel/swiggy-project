@@ -7,7 +7,7 @@ import StarBorderIcon from "@mui/icons-material/StarBorder";
 import { useValue } from "../context/ContextProvider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import SimpleLoader from 'react-simple-dots-loader';
+// import SimpleLoader from 'react-simple-dots-loader';
 
 const SlickCarousel = () => {
   const { dispatch } = useValue();
@@ -97,7 +97,7 @@ const SlickCarousel = () => {
       <div className="slider-container">
         {loadingFirstCarousel ? (
           <div className="loader-container" style={{height:"80vh"}}>
-            <SimpleLoader color='green' />
+            <h1>Loading...</h1>
           </div>
         ) : (
           <Slider {...settings}>
@@ -118,7 +118,7 @@ const SlickCarousel = () => {
       <div className="slider-container">
         {loadingSecondCarousel ? (
           <div className="loader-container" style={{height:"80vh"}}>
-            <SimpleLoader color='green' />
+          <h1>Loading...</h1>
           </div>
         ) : (
           <Slider {...settings}>
